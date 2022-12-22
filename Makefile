@@ -7,7 +7,7 @@ TARGET:=$(GOPATH)/bin/grafana-reporter
 ifeq ($(OS),Windows_NT)
 	TARGET:=$(GOPATH)/bin/grafana-reporter.exe
 endif
-SRC:=$(GOPATH)/src/github.com/yimiaoxiehou/reporter
+SRC:=$(GOPATH)/src/github.com/yimiaoxiehou/grafana-reporter
 
 .PHONY: build
 build: 	
