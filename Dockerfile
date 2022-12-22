@@ -14,7 +14,7 @@ RUN PACKAGES="wget libswitch-perl" \
         && apt-get install -y -qq $PACKAGES --no-install-recommends \
         && apt-get install -y ca-certificates --no-install-recommends \
         && wget -qO- \
-          "https://github.com/rstudio/tinytex/raw/master/tools/install-unx.sh" | \
+          "https://raw.githubusercontent.com/rstudio/tinytex/main/tools/install-unx.sh" | \
           sh -s - --admin --no-path \
         && mv ~/.TinyTeX /opt/TinyTeX \
         && /opt/TinyTeX/bin/*/tlmgr path add \
