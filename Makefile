@@ -7,12 +7,12 @@ TARGET:=$(GOPATH)/bin/grafana-reporter
 ifeq ($(OS),Windows_NT)
 	TARGET:=$(GOPATH)/bin/grafana-reporter.exe
 endif
-SRC:=$(GOPATH)/src/github.com/IzakMarais/reporter
+SRC:=$(GOPATH)/src/github.com/yimiaoxiehou/reporter
 
 .PHONY: build
 build: 	
 	go env GO111MODULE=auto
-	go install -v github.com/IzakMarais/reporter/cmd/grafana-reporter@latest
+	go install -v github.com/yimiaoxiehou/reporter/cmd/grafana-reporter@latest
 
 .PHONY: clean
 clean: 	
