@@ -11,7 +11,7 @@ SRC:=$(GOPATH)/src/github.com/IzakMarais/reporter
 
 .PHONY: build
 build: 	
-	go env -w GO111MODULE=off
+	go env GO111MODULE=off
 	go install -v github.com/IzakMarais/reporter/cmd/grafana-reporter@latest
 
 .PHONY: clean
