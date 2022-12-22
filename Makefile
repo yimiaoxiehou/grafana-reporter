@@ -18,7 +18,7 @@ build:
 
 .PHONY: buildlinux 
 buildlinux: 	
-	cmd //v //c "set GOOS=linux&&go install -v github.com/IzakMarais/reporter/cmd/grafana-reporter"
+	cmd //v //c "set GOOS=linux&&go install -v github.com/IzakMarais/reporter/cmd/grafana-reporter@latest"
 
 .PHONY: clean
 clean: 	
@@ -43,8 +43,8 @@ $(GOPATH)/bin/dep:
 
 update-deps: $(GOPATH)/bin/dep
 	@cd $(SRC) && dep ensure
-	@cd $(SRC)/cmd/grafana-reporter && go install
-
+	@cd $(SRC)/cmd/grafana-reporter && 
+	
 $(TARGET):
 	@cd $(SRC)/cmd/grafana-reporter && go install
 
