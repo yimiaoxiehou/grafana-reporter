@@ -11,7 +11,7 @@ SRC:=$(GOPATH)/src/github.com/yimiaoxiehou/reporter
 
 .PHONY: build
 build: 	
-	go install -v github.com/yimiaoxiehou/reporter/cmd/grafana-reporter@main
+	go install -v github.com/yimiaoxiehou/grafana-reporter/cmd/grafana-reporter@main
 
 .PHONY: clean
 clean: 	
