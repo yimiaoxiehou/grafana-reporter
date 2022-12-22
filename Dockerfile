@@ -3,7 +3,7 @@ FROM golang:1.8-stretch AS build
 WORKDIR /go/src/${owner:-github.com/yimiaoxiehou}/reporter
 RUN apt-get update && apt-get -y install make git
 ADD . .
-RUN make build
+RUN ls && make build
 
 # create image
 FROM debian:stretch
