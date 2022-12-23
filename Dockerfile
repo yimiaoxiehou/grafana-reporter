@@ -3,7 +3,7 @@ FROM golang:1.8-stretch AS build
 WORKDIR /go/src/${owner:-github.com/yimiaoxiehou}/grafana-reporter
 RUN apt-get update && apt-get -y install make git
 ADD . .
-RUN ls && make build
+RUN cmd/grafana-reporter && go build && mv grafana-reporter /go/bin/grafana-reporter
 
 # create image
 FROM debian:stretch
